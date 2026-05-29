@@ -3,13 +3,13 @@
 Add the marketplace in Claude Code:
 
 ```text
-/plugin marketplace add barobaonguyen/barobao-skills
+/plugin marketplace add barobaonguyen/ai-automation-skills
 ```
 
 Install the plugin:
 
 ```text
-/plugin install barobao-skills@barobao
+/plugin install ai-automation-skills@barobaonguyen
 ```
 
 Confirm it appears:
@@ -18,7 +18,7 @@ Confirm it appears:
 /plugin list
 ```
 
-Skills should appear under the `barobao-skills:<skill>` namespace. If the marketplace command fails, update Claude Code first and retry from a clean session.
+Skills should appear under the `ai-automation-skills:<skill>` namespace. If the marketplace command fails, update Claude Code first and retry from a clean session.
 
 ## Local Validation
 

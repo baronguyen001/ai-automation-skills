@@ -1,5 +1,5 @@
 {
-  "name": "barobao",
+  "name": "barobaonguyen",
   "owner": {
     "name": "barobaonguyen",
     "email": "265752715+barobaonguyen@users.noreply.github.com"
@@ -10,7 +10,7 @@
   },
   "plugins": [
     {
-      "name": "barobao-skills",
+      "name": "ai-automation-skills",
       "source": "./",
       "description": "8 battle-tested skills distilled from real indie-hacker automation work."
     }

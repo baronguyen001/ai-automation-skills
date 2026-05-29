@@ -1,13 +1,15 @@
-# barobao-skills
+# ai-automation-skills
 
 8 production-tested Claude skills for automation, Gemini cost control, OSS bounty hunting, and ML strategy validation. Distilled from 8 months of indie-hacker work.
 
+> 🧰 **Coming soon:** *Trawlkit* — a paid starter kit that wires these skills into runnable scrape → AI → alert bots in one install. Follow [@barobaonguyen](https://x.com/barobaonguyen) for the launch.
+
 ```text
-/plugin marketplace add barobaonguyen/barobao-skills
-/plugin install barobao-skills@barobao
+/plugin marketplace add barobaonguyen/ai-automation-skills
+/plugin install ai-automation-skills@barobaonguyen
 ```
 
-![Skills](https://img.shields.io/badge/skills-8-blue) ![License](https://img.shields.io/badge/license-MIT-green) ![Last commit](https://img.shields.io/github/last-commit/barobaonguyen/barobao-skills) ![Stars](https://img.shields.io/github/stars/barobaonguyen/barobao-skills)
+![Skills](https://img.shields.io/badge/skills-8-blue) ![License](https://img.shields.io/badge/license-MIT-green) ![Last commit](https://img.shields.io/github/last-commit/barobaonguyen/ai-automation-skills) ![Stars](https://img.shields.io/github/stars/barobaonguyen/ai-automation-skills)
 
 Demo captures are intentionally not fabricated. The needed screenshots are tracked in [screenshots/README.md](screenshots/README.md).
 
@@ -16,8 +18,8 @@ Demo captures are intentionally not fabricated. The needed screenshots are track
 Run these inside Claude Code:
 
 ```text
-/plugin marketplace add barobaonguyen/barobao-skills
-/plugin install barobao-skills@barobao
+/plugin marketplace add barobaonguyen/ai-automation-skills
+/plugin install ai-automation-skills@barobaonguyen
 ```
 
 Then confirm:
@@ -26,7 +28,7 @@ Then confirm:
 /plugin list
 ```
 
-Installed skills appear under the `barobao-skills:<skill>` namespace.
+Installed skills appear under the `ai-automation-skills:<skill>` namespace.
 
 ## What's In The Box
 

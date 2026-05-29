@@ -1,10 +1,10 @@
 {
-  "name": "barobao-skills",
+  "name": "ai-automation-skills",
   "version": "0.1.0",
   "description": "8 production-tested Claude skills: telegram alerts, Gemini cost tracking + structured output, walk-forward validation, config-drift audit, Algora bounty scouting, PR body formatting, short-form video scripts.",
   "author": { "name": "barobaonguyen", "url": "https://github.com/barobaonguyen" },
-  "homepage": "https://github.com/barobaonguyen/barobao-skills",
-  "repository": "https://github.com/barobaonguyen/barobao-skills",
+  "homepage": "https://github.com/barobaonguyen/ai-automation-skills",
+  "repository": "https://github.com/barobaonguyen/ai-automation-skills",
   "license": "MIT",
   "keywords": ["claude-skills", "automation", "gemini", "telegram", "bounty", "backtesting", "validation"]
 }

@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.1.1 — 2026-05-29
+
+- Renamed repo + plugin to `ai-automation-skills` (keyword-first for global SEO; GitHub redirects the old URL). Marketplace namespace is now `barobaonguyen` → install with `/plugin install ai-automation-skills@barobaonguyen`.
+
 ## v0.1.0 — 2026-05-29
 
 - Shipped the first public `barobao-skills` marketplace release.
