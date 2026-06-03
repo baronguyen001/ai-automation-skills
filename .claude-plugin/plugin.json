@@ -1,7 +1,7 @@
 {
   "name": "ai-automation-skills",
-  "version": "0.1.0",
-  "description": "8 production-tested Claude skills: telegram alerts, Gemini cost tracking + structured output, walk-forward validation, config-drift audit, Algora bounty scouting, PR body formatting, short-form video scripts.",
+  "version": "0.2.0",
+  "description": "15 production-tested Claude skills: telegram alerts, Gemini cost/cache/budget control + structured output, walk-forward validation, backtest comparison, config-drift audit, Algora + GitHub-label scouting, PR body formatting, scrape-AI-alert pipelines, cron dispatch, IMAP digests, and short-form video scripts.",
   "author": { "name": "barobaonguyen", "url": "https://github.com/barobaonguyen" },
   "homepage": "https://github.com/barobaonguyen/ai-automation-skills",
   "repository": "https://github.com/barobaonguyen/ai-automation-skills",

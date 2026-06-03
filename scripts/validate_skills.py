@@ -19,10 +19,18 @@ EXPECTED_SKILLS = {
     "algora-bounty-scout",
     "pr-body-formatter",
     "shortform-script",
+    "cron-dispatch",
+    "pipeline-orchestrator",
+    "gmail-imap-digest",
+    "gemini-prompt-cache",
+    "gemini-flash-budget",
+    "github-label-scout",
+    "backtest-comparator",
 }
 ALLOWED_FRONTMATTER_KEYS = {
     "name",
     "description",
+    "version",
     "when_to_use",
     "argument-hint",
     "allowed-tools",
@@ -117,8 +125,8 @@ def validate_manifests() -> None:
         fail("marketplace.json must have non-empty plugins")
     if not plugin.get("name"):
         fail("plugin.json must have name")
-    if plugin.get("version") != "0.1.0":
-        fail("plugin.json version must be 0.1.0")
+    if plugin.get("version") != "0.2.0":
+        fail("plugin.json version must be 0.2.0")
 
 
 def validate_skills() -> None:
