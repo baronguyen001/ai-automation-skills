@@ -1,5 +1,16 @@
 # Changelog
 
+## v0.3.0 — 2026-06-06
+
+- Grew the catalog from 15 to 20 skills. Added 5 new skills:
+  - `webhook-receiver` — a tiny stdlib HTTP server that verifies an HMAC signature in constant time and queues each payload to disk for a worker to drain (no web framework).
+  - `sqlite-state` — durable run-state between scheduled runs over one SQLite file: a seen-set for dedup, a key/value cursor to resume, and order-preserving new-item filtering.
+  - `proxy-rotator` — rotate a pool of HTTP/SOCKS proxies round-robin with failure tracking and a cooldown that benches dead proxies (BYO list via env; none shipped).
+  - `gemini-vision-extract` — structured extraction from an image with Gemini, constrained to a Pydantic `response_schema` so the result is typed JSON, not prose.
+  - `playwright-login-session` — capture a `storage_state` once via manual login, then reuse it headless so later runs start already signed in (no committed cookies).
+- Fixed the stale `barobaonguyen` GitHub namespace (the account was renamed to `baronguyen001`; GitHub only redirected): manifests, plugin homepage/repository/author, install commands, README badges, and LICENSE now point at `baronguyen001`. The marketplace install is now `/plugin install ai-automation-skills@baronguyen001`. (The `x.com/barobaonguyen` handle is unchanged — it is still the live X account.)
+- Bumped plugin + marketplace version to `0.3.0`; updated the validator's expected skill set and version gate.
+
 ## v0.2.0 — 2026-06-03
 
 - Grew the catalog from 8 to 15 skills. Added 7 new skills:

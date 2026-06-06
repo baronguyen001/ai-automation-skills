@@ -1,10 +1,10 @@
 {
   "name": "ai-automation-skills",
-  "version": "0.2.0",
-  "description": "15 production-tested Claude skills: telegram alerts, Gemini cost/cache/budget control + structured output, walk-forward validation, backtest comparison, config-drift audit, Algora + GitHub-label scouting, PR body formatting, scrape-AI-alert pipelines, cron dispatch, IMAP digests, and short-form video scripts.",
-  "author": { "name": "barobaonguyen", "url": "https://github.com/barobaonguyen" },
-  "homepage": "https://github.com/barobaonguyen/ai-automation-skills",
-  "repository": "https://github.com/barobaonguyen/ai-automation-skills",
+  "version": "0.3.0",
+  "description": "20 production-tested Claude skills: telegram alerts, Gemini cost/cache/budget control + structured output + vision extraction, walk-forward validation, backtest comparison, config-drift audit, Algora + GitHub-label scouting, PR body formatting, scrape-AI-alert pipelines, cron dispatch, IMAP digests, short-form video scripts, webhook intake, SQLite run-state, proxy rotation, and Playwright session reuse.",
+  "author": { "name": "baronguyen001", "url": "https://github.com/baronguyen001" },
+  "homepage": "https://github.com/baronguyen001/ai-automation-skills",
+  "repository": "https://github.com/baronguyen001/ai-automation-skills",
   "license": "MIT",
-  "keywords": ["claude-skills", "automation", "gemini", "telegram", "bounty", "backtesting", "validation"]
+  "keywords": ["claude-skills", "automation", "gemini", "telegram", "bounty", "backtesting", "validation", "webhook", "proxy", "playwright"]
 }

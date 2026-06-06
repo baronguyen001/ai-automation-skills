@@ -26,6 +26,11 @@ EXPECTED_SKILLS = {
     "gemini-flash-budget",
     "github-label-scout",
     "backtest-comparator",
+    "webhook-receiver",
+    "sqlite-state",
+    "proxy-rotator",
+    "gemini-vision-extract",
+    "playwright-login-session",
 }
 ALLOWED_FRONTMATTER_KEYS = {
     "name",
@@ -125,8 +130,8 @@ def validate_manifests() -> None:
         fail("marketplace.json must have non-empty plugins")
     if not plugin.get("name"):
         fail("plugin.json must have name")
-    if plugin.get("version") != "0.2.0":
-        fail("plugin.json version must be 0.2.0")
+    if plugin.get("version") != "0.3.0":
+        fail("plugin.json version must be 0.3.0")
 
 
 def validate_skills() -> None:

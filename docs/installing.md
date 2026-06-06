@@ -3,13 +3,13 @@
 Add the marketplace in Claude Code:
 
 ```text
-/plugin marketplace add barobaonguyen/ai-automation-skills
+/plugin marketplace add baronguyen001/ai-automation-skills
 ```
 
 Install the plugin:
 
 ```text
-/plugin install ai-automation-skills@barobaonguyen
+/plugin install ai-automation-skills@baronguyen001
 ```
 
 Confirm it appears:
