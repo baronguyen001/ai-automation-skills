@@ -1,5 +1,16 @@
 # Changelog
 
+## v0.4.0 — 2026-06-10
+
+- Grew the catalog from 20 to 25 skills. Added 5 new skills:
+  - `slack-webhook-alerter` — post a run result to a Slack incoming webhook as a Block Kit message wrapped in a green/red/yellow status attachment, with the webhook URL read from env only and no Slack SDK (mirrors `telegram-alerter` so a run can fan out to both).
+  - `http-retry-session` — a hardened `requests.Session` with a urllib3 `Retry` policy (exponential backoff, a 429/5xx status-forcelist, honored `Retry-After`) and a `TimeoutSession` that injects a default `(connect, read)` timeout into every call so no request hangs.
+  - `csv-report-writer` — turn a run's list of result rows into a schema'd CSV and a Markdown table from one column spec, with stable ordering, CSV quoting, and pipe/newline escaping for Markdown; stdlib only, no pandas.
+  - `env-config-loader` — load a `.env`, validate that required keys are present (one clear error listing every missing key), and read typed values (`get_int`/`get_bool`/`get_float`/`get_list`) with readable errors; stdlib only, no python-dotenv, no pydantic.
+  - `rate-limit-budget` — a token-bucket pacer that smooths bursts to a per-second rate and stops the run at a hard per-run call/cost budget so a free-tier quota survives; cross-links the `helius-rate-limiter` repo for the production library.
+- Each new skill ships a runnable `assets/*.py` helper with an offline `__main__` self-test, plus the `→ Build the full runnable bot with Trawlkit` footer.
+- Bumped plugin + marketplace version to `0.4.0`; updated the validator's expected skill set and version gate.
+
 ## v0.3.0 — 2026-06-06
 
 - Grew the catalog from 15 to 20 skills. Added 5 new skills:

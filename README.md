@@ -1,6 +1,6 @@
 # ai-automation-skills
 
-20 production-tested Claude skills for automation, Gemini cost control, OSS bounty hunting, and ML strategy validation. Distilled from 8 months of indie-hacker work.
+25 production-tested Claude skills for automation, Gemini cost control, OSS bounty hunting, and ML strategy validation. Distilled from 8 months of indie-hacker work.
 
 > 🧰 **Coming soon:** *Trawlkit* — a paid starter kit that wires these skills into runnable scrape → AI → alert bots in one install. Every skill below ends with a `→ Build the full runnable bot with Trawlkit` pointer. Follow [@barobaonguyen](https://x.com/barobaonguyen) for the launch.
 
@@ -9,7 +9,7 @@
 /plugin install ai-automation-skills@baronguyen001
 ```
 
-![Skills](https://img.shields.io/badge/skills-20-blue) ![License](https://img.shields.io/badge/license-MIT-green) ![Last commit](https://img.shields.io/github/last-commit/baronguyen001/ai-automation-skills) ![Stars](https://img.shields.io/github/stars/baronguyen001/ai-automation-skills)
+![Skills](https://img.shields.io/badge/skills-25-blue) ![License](https://img.shields.io/badge/license-MIT-green) ![Last commit](https://img.shields.io/github/last-commit/baronguyen001/ai-automation-skills) ![Stars](https://img.shields.io/github/stars/baronguyen001/ai-automation-skills)
 
 Demo captures are intentionally not fabricated. The needed screenshots are tracked in [screenshots/README.md](screenshots/README.md).
 
@@ -37,6 +37,7 @@ Installed skills appear under the `ai-automation-skills:<skill>` namespace.
 | Skill | What it does | Trigger |
 |---|---|---|
 | `telegram-alerter` | Sends Telegram alerts from Python with env-only credentials, HTML formatting, inline buttons, photo support, and 429 retry handling. | "send a telegram alert", "notify telegram" |
+| `slack-webhook-alerter` | Posts run results to a Slack incoming webhook as a Block Kit message with a green/red/yellow status attachment, env-only webhook, no Slack SDK. | "send a slack alert", "post to a slack channel" |
 | `cron-dispatch` | Schedules any script on Windows Task Scheduler or Linux cron with logging and an overlap guard. | "run nightly", "set up a cron job" |
 | `pipeline-orchestrator` | Chains scrape → AI → alert stages with per-stage retry and a JSON checkpoint so a crashed run resumes. | "chain these steps", "resumable pipeline" |
 | `gmail-imap-digest` | Pulls email over IMAP, keeps only allowlisted senders, and renders a daily digest (BYO app-password). | "build a daily email digest", "IMAP fetch" |
@@ -71,13 +72,22 @@ Installed skills appear under the `ai-automation-skills:<skill>` namespace.
 | `backtest-comparator` | Compares strategy variants across years/folds and flags the ones that overfit a single lucky period. | "compare backtest variants", "flag overfit" |
 | `config-audit-checklist` | Audits config drift between a snapshot doc, `.env`, and README defaults before a backtest or deploy. | "config audit", "params drift" |
 
+### Infrastructure
+
+| Skill | What it does | Trigger |
+|---|---|---|
+| `http-retry-session` | A hardened `requests.Session` with urllib3 retry, exponential backoff, a 429/5xx status-forcelist, honored Retry-After, and a default connect/read timeout on every call. | "add retries to my requests", "set request timeouts" |
+| `rate-limit-budget` | A token-bucket pacer that smooths bursts to a per-second rate and stops the run at a hard per-run call/credit budget so a free-tier quota survives. | "rate-limit api calls", "stay under the quota" |
+| `csv-report-writer` | Turns a run's result rows into a schema'd CSV plus a Markdown table from one column spec, with stable ordering and safe escaping, no pandas. | "export a CSV report", "make a markdown table" |
+| `env-config-loader` | Loads a `.env`, validates required keys are present, and reads typed values (int/bool/float/list) with clear errors, stdlib only, no pydantic. | "load my .env", "fail fast on missing env vars" |
+
 ### Content
 
 | Skill | What it does | Trigger |
 |---|---|---|
 | `shortform-script` | Drafts short-form or long-form video scripts from a topic plus a creator persona file, using fact slots to avoid invented personal claims. | "write a video script", "tiktok script" |
 
-## Why These 20
+## Why These 25
 
 Every skill maps to a real pattern used repeatedly across automation, Gemini, validation, and open-source contribution workflows. The point is not a huge catalog; it is a compact set of skills with concrete examples, reusable assets, and enough install structure to work as a Claude Code plugin marketplace. Each one teaches the reusable technique; *Trawlkit* (coming soon) wires them into a full runnable bot.
 
