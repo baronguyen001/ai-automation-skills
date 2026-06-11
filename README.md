@@ -1,6 +1,6 @@
 # ai-automation-skills
 
-25 production-tested Claude skills for automation, Gemini cost control, OSS bounty hunting, and ML strategy validation. Distilled from 8 months of indie-hacker work.
+30 production-tested Claude skills for automation, Gemini cost control, OSS bounty hunting, artifact capture, and ML strategy validation. Distilled from 8 months of indie-hacker work.
 
 > 🧰 **Coming soon:** *Trawlkit* — a paid starter kit that wires these skills into runnable scrape → AI → alert bots in one install. Every skill below ends with a `→ Build the full runnable bot with Trawlkit` pointer. Follow [@barobaonguyen](https://x.com/barobaonguyen) for the launch.
 
@@ -9,7 +9,7 @@
 /plugin install ai-automation-skills@baronguyen001
 ```
 
-![Skills](https://img.shields.io/badge/skills-25-blue) ![License](https://img.shields.io/badge/license-MIT-green) ![Last commit](https://img.shields.io/github/last-commit/baronguyen001/ai-automation-skills) ![Stars](https://img.shields.io/github/stars/baronguyen001/ai-automation-skills)
+![Skills](https://img.shields.io/badge/skills-30-blue) ![License](https://img.shields.io/badge/license-MIT-green) ![Last commit](https://img.shields.io/github/last-commit/baronguyen001/ai-automation-skills) ![Stars](https://img.shields.io/github/stars/baronguyen001/ai-automation-skills)
 
 Demo captures are intentionally not fabricated. The needed screenshots are tracked in [screenshots/README.md](screenshots/README.md).
 
@@ -41,8 +41,10 @@ Installed skills appear under the `ai-automation-skills:<skill>` namespace.
 | `cron-dispatch` | Schedules any script on Windows Task Scheduler or Linux cron with logging and an overlap guard. | "run nightly", "set up a cron job" |
 | `pipeline-orchestrator` | Chains scrape → AI → alert stages with per-stage retry and a JSON checkpoint so a crashed run resumes. | "chain these steps", "resumable pipeline" |
 | `gmail-imap-digest` | Pulls email over IMAP, keeps only allowlisted senders, and renders a daily digest (BYO app-password). | "build a daily email digest", "IMAP fetch" |
+| `discord-bot-poller` | Polls one Discord channel for new messages with a bot token from env and dispatches a handler while honoring REST rate limits. | "poll a Discord channel", "watch messages" |
 | `webhook-receiver` | A stdlib HTTP receiver that verifies an HMAC signature in constant time and queues each payload to disk for a worker. | "receive a webhook", "verify a webhook signature" |
 | `sqlite-state` | Gives scheduled scripts memory between runs: a seen-set for dedup, a cursor to resume, all in one SQLite file. | "dedup across runs", "remember the last id" |
+| `notion-row-writer` | Upserts a Notion database row by a stable key with API key and database id from env. | "write to Notion", "upsert by URL" |
 
 ### Gemini Meta
 
@@ -63,6 +65,7 @@ Installed skills appear under the `ai-automation-skills:<skill>` namespace.
 | `pr-body-formatter` | Builds a complete GitHub PR body from a diff summary and issue reference without TODO placeholders. | "write a PR description", "pr body template" |
 | `proxy-rotator` | Rotates a pool of HTTP/SOCKS proxies round-robin with failure tracking and a cooldown for dead ones (BYO list). | "rotate proxies", "avoid IP bans" |
 | `playwright-login-session` | Captures a Playwright `storage_state` once, then reuses it headless so later runs start already signed in. | "reuse a logged-in session", "skip login each run" |
+| `playwright-pdf-snapshot` | Renders any URL to a headless PDF or PNG snapshot with Playwright and no committed cookies. | "save page as PDF", "capture PNG snapshot" |
 
 ### Validation
 
@@ -80,6 +83,8 @@ Installed skills appear under the `ai-automation-skills:<skill>` namespace.
 | `rate-limit-budget` | A token-bucket pacer that smooths bursts to a per-second rate and stops the run at a hard per-run call/credit budget so a free-tier quota survives. | "rate-limit api calls", "stay under the quota" |
 | `csv-report-writer` | Turns a run's result rows into a schema'd CSV plus a Markdown table from one column spec, with stable ordering and safe escaping, no pandas. | "export a CSV report", "make a markdown table" |
 | `env-config-loader` | Loads a `.env`, validates required keys are present, and reads typed values (int/bool/float/list) with clear errors, stdlib only, no pydantic. | "load my .env", "fail fast on missing env vars" |
+| `s3-uploader` | Uploads and downloads run artifacts to S3-compatible storage with bucket and credentials from env. | "upload to S3", "archive artifacts" |
+| `pdf-text-extract` | Extracts text and rough table rows from digital PDFs for downstream AI, with no OCR binary required. | "extract PDF text", "pull tables from PDF" |
 
 ### Content
 
@@ -87,7 +92,7 @@ Installed skills appear under the `ai-automation-skills:<skill>` namespace.
 |---|---|---|
 | `shortform-script` | Drafts short-form or long-form video scripts from a topic plus a creator persona file, using fact slots to avoid invented personal claims. | "write a video script", "tiktok script" |
 
-## Why These 25
+## Why These 30
 
 Every skill maps to a real pattern used repeatedly across automation, Gemini, validation, and open-source contribution workflows. The point is not a huge catalog; it is a compact set of skills with concrete examples, reusable assets, and enough install structure to work as a Claude Code plugin marketplace. Each one teaches the reusable technique; *Trawlkit* (coming soon) wires them into a full runnable bot.
 

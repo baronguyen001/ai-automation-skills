@@ -1,5 +1,15 @@
 # Changelog
 
+## v0.5.0 — 2026-06-11
+
+- Grew the catalog from 25 to 30 skills. Added 5 new skills:
+  - `s3-uploader` — upload/download run artifacts to S3-compatible storage with BYO bucket, endpoint, and credentials from env; supports generic object storage without committed credentials.
+  - `pdf-text-extract` — extract digital PDF text plus rough table rows for downstream AI using pure-Python PDF libraries when available, with no OCR binary requirement.
+  - `discord-bot-poller` — poll one Discord channel for new messages with a bot token from env, dispatch a handler oldest-to-newest, and honor REST rate limits.
+  - `notion-row-writer` — upsert a Notion database row by a stable key using `NOTION_API_KEY` and database id from env, with clear missing-config errors.
+  - `playwright-pdf-snapshot` — render any URL to headless PDF and/or PNG snapshots with Playwright, no committed cookies or credentials.
+- Bumped plugin + marketplace version to `0.5.0`; updated the validator's expected skill set and README count.
+
 ## v0.4.0 — 2026-06-10
 
 - Grew the catalog from 20 to 25 skills. Added 5 new skills:
